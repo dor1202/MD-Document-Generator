@@ -1,0 +1,45 @@
+{
+	"name": "search-blog-example",
+	"displayName": "search-blog-example",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.64.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:search-blog-example.generateIgnoreFile",
+		"onCommand:search-blog-example.printFiles"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "search-blog-example.generateIgnoreFile",
+				"title": "Generate Ignore File"
+			},
+			{
+				"command": "search-blog-example.printFiles",
+				"title": "Print Files"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.64.0",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.0",
+		"@types/node": "14.x",
+		"eslint": "^8.9.0",
+		"glob": "^7.2.0",
+		"mocha": "^9.2.1",
+		"typescript": "^4.5.5",
+		"@vscode/test-electron": "^2.1.2"
+	}
+}
